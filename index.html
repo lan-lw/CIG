@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CIG</title>
+<link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="content">
+  <h1><strong>Generative Zero-Shot Composed Image Retrieval</strong></h1>
+  <p id="authors"><a href="https://lan-lw.github.io/" style="color:blue;">Lan Wang<sup>1</sup></a> <a href="https://wei-ao.github.io/"  style="color:blue;">Wei Ao<sup>1</sup></a> <br></a><a href="https://vishnu.boddeti.net/"  style="color:blue;">Vishnu Boddeti<sup>1</sup></a> <a href="https://sites.google.com/site/sernam"  style="color:blue;">Ser-Nam Lim<sup>2</sup></a><br>
+
+    <span style="font-size: 16px"><br>
+        <sup>1</sup> Michigan State University  &nbsp  <sup>2</sup> University of Central Florida <br>     
+        </p>
+
+   <div style="text-align: center; padding-top: 4px;">
+    <span style="font-size: 24px;">
+        CVPR 2025
+    </span>
+</div>
+
+
+
+    <font size="+2">
+          <p style="text-align: center;">
+            <a href="https://hal.cse.msu.edu/assets/pdfs/papers/2025-cvpr-cig-generative-zero-shot-composed-image-retrieval.pdf" target="_blank">[Paper]</a> 
+          </p>
+    </font>
+
+
+  <img src="./data/web_teaser.png" class="teaser-gif" style="width:100%;">
+    
+    <p>
+  <strong>Zero-Shot Composed Image Retrieval vs. Pseudo Target-Aided Composed Image Retrieval.</strong> Conventional ZS-CIR methods
+map the image latent embedding into the token embedding space by textual inversion. The proposed Pseudo Target-Aided method provide
+additional information for composed embeddings from pseudo-target images.
+</p>
+</div>
+
+
+<div class="content">
+  <h2 style="text-align:center;">Abstract</h2>
+  <p>Composed Image Retrieval (CIR) is a vision-language task utilizing queries comprising images and textual descriptions to achieve precise image retrieval. This task seeks to find images that are visually similar to a reference image while incorporating specific changes or features described textually (visual delta). CIR enables a more flexible and user-specific retrieval by bridging visual data with verbal instructions. This paper introduces a novel generative method that augments Composed Image Retrieval by Composed Image Generation (CIG) to provide pseudo-target images. CIG utilizes a textual inversion network to map reference images into semantic word space, which generates pseudo-target images in combination with textual descriptions. These images serve as additional visual information, significantly improving the accuracy and relevance of retrieved images when integrated into existing retrieval frameworks. Experiments conducted across multiple CIR datasets and several baseline methods demonstrate improvements in retrieval performance, which shows the potential of our approach as an effective add-on for existing composed image retrieval.</p>
+</div>
+
+<div class="content">
+    <h2>Contributions</h2>
+    <ul>
+      <li>We explore an effective generative method for zero-shot compositional image retrieval, CIG, which can be combined with any CIR methods.</li>
+      <p></p>
+      <li>Our training process does not require any triplets, utilizing only image-caption pairs in a self-supervised training regime.
+      </li>
+      <p></p>
+      <li>We conduct multiple experiments on different baselines and obtain significant improvements over different benchmarks.</li>
+      <p></p>
+      <li>CIG provides a new direction for the CIR task, directly generating a new image by users' instruction while staying faithful to the reference image.</li>
+    </ul>        
+    </div>
+
+<div class="content">        
+    <h2>Method</h2>
+    <img class="summary-img" src="./data/web_cig.png" style="width:100%;"> <br>
+    <p>
+ Overview of the proposed Composed Image Generation (CIG). During training, CIG model uses composed prompt embeddings as textual conditions, and learn image information from them. In inference stage, the reference image and delta caption form the composed prompt embedding, which CIG model utilizes to generate pseudo target images. These pseudo target images assist in improving
+ZS-CIR. Top: the training process, including textual inversion network pretraining (left) and CIG model pertaining (right); bottom: inference process for CIR.
+</p>   
+  </div>
+
+<div class="content">        
+    <h2>Qualitative Results</h2>
+    <img class="summary-img" src="./data/web_vis.png" style="width:100%;"> <br>
+    <p> We visualize the generated images across different benchmarks, CIG effectively make changes according to the caption while preserving the reference image features.</p>    
+  </div>
+
+  <div class="content">        
+    <h2>Qualitative Results</h2>
+    <img class="summary-img" src="./data/web_takeaways.png" style="width:100%;"> <br>
+    
+
+
+<div class="content">
+  <h2>BibTex</h2>
+  <code> 
+    @inproceedings{wang2025generative,
+  &nbsp;&nbsp;title={Generative Zero-Shot Composed Image Retrieval},
+  &nbsp;&nbsp;author={Wang, Lan and Ao, Wei and Boddeti, Vishnu Naresh and Lim, Ser-Nam},
+  &nbsp;&nbsp;booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  &nbsp;&nbsp;year={2025}
+} </code> 
+</div>
+
+
+</body>
+
+
+</html>
